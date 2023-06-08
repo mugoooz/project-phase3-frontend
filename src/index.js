@@ -33,6 +33,24 @@ const WeatherApp = () => {
       });
   };
 
+  useEffect(() => {
+    // Fetch weather data on page load
+    getWeather();
+  }, []);
+
+  return (
+    <div>
+      <input
+        type="text"
+        id="city"
+        value={cityValue}
+        onChange={handleInputChange}
+      />
+      <button id="search-btn" onClick={getWeather}>
+        Search
+      </button>
+      <div id="result"></div>
+
 
 
 
