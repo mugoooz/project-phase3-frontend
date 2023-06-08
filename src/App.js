@@ -55,3 +55,28 @@ const App = () => {
     getWeather();
   }, []);
 
+  return (
+    <div className="wrapper">
+      <div className="shape shape-1"></div>
+      <div className="shape shape-2"></div>
+      <div className="container">
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Enter a city name"
+            id="city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <button id="search-btn" onClick={getWeather}>
+            Search
+          </button>
+        </div>
+        <div id="result">{result}</div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
