@@ -22,6 +22,17 @@ const WeatherApp = () => {
     // Clear the input field
     setCityValue('');
 
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((data) => {
+        setWeatherData(data);
+      })
+      .catch(() => {
+        // Display error message if city not found
+        setWeatherData(null);
+      });
+  };
+
 
 
 
