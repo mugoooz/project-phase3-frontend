@@ -45,3 +45,13 @@ const App = () => {
             </div>
           );
         })
+        .catch(() => {
+          setResult(<h3 className="msg">City not found</h3>);
+        });
+    }
+  };
+
+  useEffect(() => {
+    getWeather();
+  }, []);
+
