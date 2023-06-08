@@ -24,3 +24,24 @@ const App = () => {
           console.log(data.name);
           console.log(data.main.temp_min);
           console.log(data.main.temp_max);
+
+          setResult(
+            <div>
+              <h2>{data.name}</h2>
+              <h4 className="weather">{data.weather[0].main}</h4>
+              <h4 className="desc">{data.weather[0].description}</h4>
+              <img src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`} alt="Weather Icon" />
+              <h1>{data.main.temp} &#176;</h1>
+              <div className="temp-container">
+                <div>
+                  <h4 className="title">min</h4>
+                  <h4 className="temp">{data.main.temp_min}&#176;</h4>
+                </div>
+                <div>
+                  <h4 className="title">max</h4>
+                  <h4 className="temp">{data.main.temp_max}&#176;</h4>
+                </div>
+              </div>
+            </div>
+          );
+        })
