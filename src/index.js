@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 const WeatherApp = () => {
   const [cityValue, setCityValue] = useState('');
@@ -49,8 +49,8 @@ const WeatherApp = () => {
       <button id="search-btn" onClick={getWeather}>
         Search
       </button>
-      <div id="result"></div>
-      {weatherData ? (
+      <div id="result">
+        {weatherData ? (
           <div>
             <h2>{weatherData.name}</h2>
             <h4 className="weather">{weatherData.weather[0].main}</h4>
@@ -71,19 +71,14 @@ const WeatherApp = () => {
               </div>
             </div>
           </div>
-          ) : (
-            <h3 className="msg">
-              {cityValue.length === 0 ? 'Please enter a city name' : 'City not found'}
-            </h3>
-          )}
-        </div>
+        ) : (
+          <h3 className="msg">
+            {cityValue.length === 0 ? 'Please enter a city name' : 'City not found'}
+          </h3>
+        )}
       </div>
-    );
-  };
-  
-  export default WeatherApp;
+    </div>
+  );
+};
 
-
-
-
-}
+export default WeatherApp;
