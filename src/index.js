@@ -9,3 +9,20 @@ const WeatherApp = () => {
   const handleInputChange = (event) => {
     setCityValue(event.target.value);
   };
+
+  const getWeather = () => {
+    if (cityValue.length === 0) {
+      // Display error message if city name is empty
+      setWeatherData(null);
+      return;
+    }
+
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${key}&units=metric`;
+
+    // Clear the input field
+    setCityValue('');
+
+
+
+
+}
