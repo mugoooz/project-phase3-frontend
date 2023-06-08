@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import '/Users/wvmugo/Development/phase3-project/src/index.css'
+import key from '/Users/wvmugo/Development/phase3-project/src/key.js'
 
 const App = () => {
   const [city, setCity] = useState('Nairobi');
